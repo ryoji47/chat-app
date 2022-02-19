@@ -1,0 +1,149 @@
+.wrapper {
+  display: flex;
+  /* height: 100vh; */
+  /* 親要素に付与したものは子要素にも反映される(side-barとchat) */
+  /* html,cssは上から順に読み込まれる */
+}
+
+/* サイドバー */
+.side-bar {
+  background-color: #253141;
+  width: 300px;
+  height: 100vh;
+  /* 片方の子要素にheightがあれば同じ高さになるので省略できる(chat) */
+}
+/* サイドバーのヘッダー */
+.side-bar-header {
+  height: 100px;
+  padding: 0 20px;/* 今回の場合は子要素に付与していく(問3参照) */
+  background-color: #253141;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* 親要素にflexした時に使えるjustifyとalign(横並び左右分け中央になる*今回の場合)*/
+}
+.header-name a { /* aはクラス要素の中のa(タグ)のみを修飾するために使っている */
+  color: #FAFAFA;/* noneでは色まで変えれないため */
+  font-size: 16px;
+  text-decoration: none;/* URLの線を消すための記述 */
+}
+.create-room a {
+  padding: 14px;
+  font-size: 10px;
+  color: deepskyblue;
+  border: 1px solid lightskyblue;
+  text-decoration: none;
+}
+/* ルーム一覧 */
+.rooms {
+  background-color: #2F3E51;
+  height: calc(100vh - 100px);
+  padding: 0 20px;
+  overflow: scroll;/* スクロールしたい子要素の親要素に付与してあげる */
+}
+.room {
+  padding: 20px 0 40px;
+}
+.room-name a {
+  text-decoration: none;
+  color: white;
+}
+
+/* チャット欄 */
+.chat {
+  background-color: #FFFFFF;
+  width: calc(100vw - 300px);
+  /* height: 100vh; */
+}
+/* チャット欄のヘッダー */
+.chat-header {
+  height: 100px;
+  padding: 0 40px;
+  display: flex;
+  justify-content: space-between;
+  /* align-items: center; ではなくmargin-topで調整(仕様書で指定されているため) */
+}
+.header-title {
+  font-size: 24px;
+  color: #333;
+  margin-top: 36px;
+}
+.header-button {
+  margin-top: 40px;
+}
+.header-button a {
+  color: darkred;
+  border: 1px solid darkred;
+  padding: 20px;
+  text-decoration: none;
+}
+/* メッセージ欄 */
+.messages {
+  background-color: #FAFAFA;
+  height: calc(100vh - 100px - 90px);
+  padding: 46px 40px 0;
+  overflow: scroll;
+}
+.message {
+  margin-top: 10px;
+}
+.upper-message {
+  display: flex;
+}
+.message-user {
+  font-size: 16px;
+  color: #434A54;
+}
+.message-date {
+  font-size: 12px;
+  color: #999;
+  padding-left: 10px;
+}
+.lower-message {
+  margin-top: 10px;
+}
+.message-content {
+  font-size: 14px;
+  color: #434A54;
+  margin-bottom: 40px;
+}
+/* 入力フォーム */
+.form {
+  background-color: #DDDDDD;
+  height: 90px;
+  padding: 20px 40px;
+  display: flex;
+}
+.form-input {
+  background-color: white;
+  display: flex;
+  width: 100%;/* そのままだと小さいのでform名一杯大きくするため
+                  (子要素は親要素より大きくなれないので両方に書いている) */
+}
+.form-message {
+  border: none;/* 周りの線を消すため */
+  padding-left: 10px;
+  height: 50px;
+  width: 100%;
+}
+.form-submit {
+  border: none;
+  font-size: 16px;
+  color: white;
+  padding: 0 20px;
+  background-color: #38AEF0;
+  margin-left: 15px;
+  height: 50px;
+}
+.form-image {
+  font-size: 12px;
+  background-color: lightblue;
+  color: white;
+  padding: 12px;
+  width: 60px;
+  margin: 5px 10px;
+  text-align: center;
+}
+.hidden {
+  display: none;
+} 
