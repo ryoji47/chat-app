@@ -1,0 +1,42 @@
+.wrapper {
+  display: flex;
+  /* height: 100vh; */
+  /* 親要素に付与したものは子要素にも反映される(side-barとchat) */
+}
+
+/* サイドバー */
+.side-bar {
+  background-color: #253141;
+  width: 300px;
+  height: 100vh;
+  padding: 0 20px;
+  /* 片方の子要素にheightがあれば同じ高さになるので省略できる(chat) */
+}
+.side-bar-header {
+  height: 100px;
+}
+.room {
+  background-color: #2F3E51;
+  height: calc(100vh - 100px);
+}
+
+/* チャット欄 */
+.chat {
+  background-color: #FFFFFF;
+  width: calc(100vw - 300px);
+  padding: 0 40px;
+  /* height: 100vh; */
+}
+.chat-header {
+  height: 100px;
+}
+.messages {
+  background-color: #FAFAFA;
+  height: calc(100vh - 100px - 90px);
+  padding-top: 46px;
+}
+.form {
+  background-color: #DDDDDD;
+  height: 90px;
+  padding: 20px 0;
+}
