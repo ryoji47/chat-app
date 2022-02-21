@@ -12,37 +12,7 @@
 </div>
 
 <div class='messages'>
-  <div class="message">
-    <div class="upper-message">
-      <div class="message-user">
-        Ryoji
-      </div>
-      <div class="message-date">
-        2022/2/10(Thurs) 12:43:30
-      </div>
-    </div>
-    <div class="lower-message">
-      <div class="message-content">
-        何食べたい？
-      </div>
-    </div>
-  </div>
-
-  <div class="message">
-    <div class="upper-message">
-      <div class="message-user">
-        Tomo
-      </div>
-      <div class="message-date">
-        2022/2/10(Thurs) 12:47:30
-      </div>
-    </div>
-    <div class="lower-message">
-      <div class="message-content">
-        うどんが食べたいです
-      </div>
-    </div>
-  </div>
+  <%= render partial: 'message', collection: @messages %>
 </div>
 
 
